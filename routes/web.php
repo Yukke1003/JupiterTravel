@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'JuppiterController@planTopShow');
+
+Route::post('/main/result','JuppiterController@simpleResult');
+
+Route::get('/main/travel_top', 'JuppiterController@PlanTopShow');
+
+//Route::resource('main', 'JuppiterController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

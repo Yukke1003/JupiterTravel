@@ -29,5 +29,16 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    
+    'weather_api' => [
+        'weather_time_url' => env('weather_time_url'),
+        'weather_date_url' => env('weather_date_url'),
+        'weather_key' => env('weather_key'),
+    ],
+    
+    'yahoo_local_api' => [
+        'yahoo_local_url' => env('yahoo_local_url'),
+        'yahoo_key' => env('yahoo_key'),
+    ],
 
 ];

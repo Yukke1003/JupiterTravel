@@ -4,25 +4,27 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+use App\Services\JuppiterService;
+
+class JuppiterServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */
     public function register()
     {
-        $this->app->bind('App\Services\JuppiterService');
+        $this->app->bind('JuppiterService',JuppiterService::class);
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */
     public function boot()
     {
-        \URL::forceScheme('https');
+        //
     }
 }

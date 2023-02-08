@@ -174,7 +174,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        
+        /*
+         * User Service Providers...
+         */
+        App\Providers\JuppiterServiceProvider::class, 
+          
     ],
 
     /*
